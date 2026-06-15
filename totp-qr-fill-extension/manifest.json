@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Ephemeral 2FA QR Filler",
+  "description": "Detects a visible otpauth QR code, generates a session-scoped TOTP code, and fills it into the current page.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "Fill 2FA code",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2FA QR Filler</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>2FA QR Filler</h1>
+      <p class="hint">识别当前可见页面里的 2FA 二维码，生成验证码并填入页面。密钥仅在 Firefox 当前浏览器会话内保留。</p>
+      <button id="scanButton" type="button">识别并填充</button>
+      <section id="codePanel" class="code-panel" hidden>
+        <div class="code-box">
+          <span id="codeValue" class="code-value" aria-label="验证码"></span>
+          <span id="timeValue" class="time-value"></span>
+        </div>
+        <button id="copyButton" class="copy-button" type="button">复制</button>
+      </section>
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+    <script src="vendor/jsQR.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

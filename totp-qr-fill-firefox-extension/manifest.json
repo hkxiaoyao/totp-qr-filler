@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "2FA QR Filler",
+  "description": "Detects a visible otpauth QR code, keeps it in memory for the browser session, and fills TOTP codes into the current page.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "tabs", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Fill 2FA code",
+    "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ephemeral-2fa-qr-filler@example.local",
+      "data_collection_permissions": {
+        "required": ["none"]
+      },
+      "strict_min_version": "78.0"
+    }
+  }
+}
